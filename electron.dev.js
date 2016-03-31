@@ -17,6 +17,8 @@ app.on('ready', function () {
 
   mainWindow.loadURL('http://localhost:3009/');
 
+  mainWindow.webContents.openDevTools();
+
   mainWindow.on('closed', function () {
     mainWindow = null;
   });
