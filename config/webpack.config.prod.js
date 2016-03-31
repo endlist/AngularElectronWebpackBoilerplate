@@ -5,8 +5,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = _.extend({}, baseConfig, {
   entry: path.resolve(__dirname, '../app/main.js'),
-  alias: {
-  },
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js'

@@ -28,14 +28,20 @@ module.exports = {
   module: {
     loaders: [
       // Exports Angular
-      { test: /[\/]angular\.js$/, loader: "exports?angular" },
+      { test: /[\/]angular\.js$/, loader: 'exports?angular' },
 
       // File Loaders
       { test: /\.(woff2|woff|ttf|eot|svg|png)($|\?)/, loader: 'file' },
       { test: /\.ejs$/, loader: 'ejs' },
       { test: /\.css$/, loader: 'style!css' },
       { test: /\.html$/, loader: 'html' },
-      { test: /\.js$/, loader: 'babel' },
+      { 
+        test: /\.js$/,
+        loader: 'babel',
+        query: {
+          presets: ['es2015']
+        }
+      },
     ]
   },
   plugins: [
