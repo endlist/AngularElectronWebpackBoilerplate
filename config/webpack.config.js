@@ -18,7 +18,8 @@ module.exports = {
       path.resolve('../node_modules')
     ],
     alias: {
-      angular: 'angular/angular'
+      angular: 'angular/angular',
+      semantic: 'semantic-ui-css/semantic.css'
     },
     extensions: [ 
       '', '.js', '.html', '.css'
@@ -30,7 +31,9 @@ module.exports = {
       { test: /[\/]angular\.js$/, loader: "exports?angular" },
 
       // File Loaders
+      { test: /\.(woff2|woff|ttf|eot|svg|png)($|\?)/, loader: 'file' },
       { test: /\.ejs$/, loader: 'ejs' },
+      { test: /\.css$/, loader: 'style!css' },
       { test: /\.html$/, loader: 'html' },
       { test: /\.js$/, loader: 'babel' },
     ]

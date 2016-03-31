@@ -1,5 +1,6 @@
 'use strict';
 
+require('./component.css');
 const template = require('./component.html');
 
 module.exports = angular.module('component.component', [
