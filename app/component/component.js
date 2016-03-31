@@ -2,7 +2,7 @@
 
 const template = require('./component.html');
 
-module.exports = angular.module('testComponents', [
+module.exports = angular.module('component.component', [
 ])
 
 .controller('testComponentCtrl', [
