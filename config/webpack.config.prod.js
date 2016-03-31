@@ -4,7 +4,7 @@ var baseConfig = require('./webpack.config');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = _.extend({}, baseConfig, {
-  entry: path.resolve(__dirname, '../app/main.js'),
+  entry: './main',
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js'
@@ -12,7 +12,7 @@ module.exports = _.extend({}, baseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Test Application',
-      template: 'app/index.ejs',
+      template: 'index.ejs',
       filename: 'index.html'
     })
   ]

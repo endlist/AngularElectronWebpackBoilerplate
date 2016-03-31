@@ -5,8 +5,9 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  context: path.resolve(__dirname, '../src'),
   entry: {
-    app: ['webpack/hot/dev-server', path.resolve(__dirname, '../app/main.js')]
+    app: ['webpack/hot/dev-server', './main']
   },
   output: {
     path: path.resolve(__dirname, '../dev'),
@@ -14,7 +15,7 @@ module.exports = {
   },
   resolve: {
     root: [
-      path.resolve('../app'),
+      path.resolve('../src'),
       path.resolve('../node_modules')
     ],
     alias: {
@@ -47,7 +48,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'DEV: Test Application',
-      template: 'app/index.ejs',
+      template: 'index.ejs',
       filename: 'index.html'
     }),
     new webpack.HotModuleReplacementPlugin()
