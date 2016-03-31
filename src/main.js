@@ -2,8 +2,8 @@
 
 require('angular');
 require('semantic');
-const component = require('./component');
+const components = require('./components');
 
 angular.module('test', [
-  component.name
+  components.name
 ]);
