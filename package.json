@@ -1,0 +1,35 @@
+{
+  "name": "configtool",
+  "version": "0.0.1",
+  "description": "web service configuration",
+  "main": "electron.prod.js",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "lodash": "^4.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.4",
+    "babel-loader": "^6.2.4",
+    "del": "^2.2.0",
+    "ejs-loader": "^0.2.1",
+    "electron-packager": "^6.0.0",
+    "electron-prebuilt": "^0.37.3",
+    "exports-loader": "^0.6.3",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.15.0",
+    "minimist": "^1.2.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack-dev-server --devtool eval --config=config/webpack.config.js --progress --colors --hot --inline --content-base=build --port=3009",
+    "start": "electron electron.dev.js",
+    "build": "NODE_ENV=production webpack -p --config=config/webpack.config.prod.js",
+    "package-mac": "NODE_ENV=production node electron.package.js --platform=darwin",
+    "pack-mac": "electron-packager . --platform=darwin --arch=x64 --overwrite --out=releases --prune",
+    "package-win": "NODE_ENV=production node electron.package.js --platform=win32"
+  },
+  "author": "Li Wren <lian.johnson@logrhythm.com>",
+  "license": "ISC"
+}
