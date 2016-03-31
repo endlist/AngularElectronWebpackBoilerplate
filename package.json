@@ -8,6 +8,7 @@
     "lodash": "^4.6.1"
   },
   "devDependencies": {
+    "angular-mocks": "^1.5.3",
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
     "del": "^2.2.0",
@@ -17,12 +18,17 @@
     "exports-loader": "^0.6.3",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.15.0",
+    "karma": "^0.13.22",
+    "karma-electron-launcher": "^0.1.0",
+    "karma-mocha": "^0.2.2",
+    "karma-sinon-chai": "^1.2.0",
+    "karma-webpack": "^1.7.0",
     "minimist": "^1.2.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start",
     "watch": "webpack-dev-server --devtool eval --config=config/webpack.config.js --progress --colors --hot --inline --content-base=build --port=3009",
     "start": "electron config/electron.dev.js",
     "build": "NODE_ENV=production webpack -p --config=config/webpack.config.prod.js",
