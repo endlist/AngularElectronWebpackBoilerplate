@@ -1,8 +1,8 @@
 {
-  "name": "configtool",
+  "name": "TestElectronApp",
   "version": "0.0.1",
-  "description": "web service configuration",
-  "main": "electron.prod.js",
+  "description": "Boilerplate setup with angular, webpack, and electron.",
+  "main": "config/electron.prod.js",
   "dependencies": {
     "angular": "^1.5.3",
     "lodash": "^4.6.1"
@@ -24,10 +24,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack-dev-server --devtool eval --config=config/webpack.config.js --progress --colors --hot --inline --content-base=build --port=3009",
-    "start": "electron electron.dev.js",
+    "start": "electron config/electron.dev.js",
     "build": "NODE_ENV=production webpack -p --config=config/webpack.config.prod.js",
     "package-mac": "NODE_ENV=production node electron.package.js --platform=darwin",
-    "pack-mac": "electron-packager . --platform=darwin --arch=x64 --overwrite --out=releases --prune",
     "package-win": "NODE_ENV=production node electron.package.js --platform=win32"
   },
   "author": "Li Wren <lian.johnson@logrhythm.com>",

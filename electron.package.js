@@ -18,7 +18,7 @@ const chosenPlatform = argv.platform || '';
 
 
 const DEFAULT_OPTS = {
-  dir: './dist',
+  dir: './',
   name: appName,
   asar: shouldUseAsar,
   ignore: [
